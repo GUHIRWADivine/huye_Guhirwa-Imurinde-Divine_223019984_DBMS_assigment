@@ -1,0 +1,300 @@
+mysql> CREATE DATABASE RUHANDE;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> USE NGOMA;
+ERROR 1049 (42000): Unknown database 'ngoma'
+mysql> CREATE DATABASE RUHANDE;
+ERROR 1007 (HY000): Can't create database 'ruhande'; database exists
+mysql> USE RUHANDE;
+Database changed
+mysql> CREATE TABLE NGOMA;
+ERROR 4028 (HY000): A table must have at least one visible column.
+mysql> CREATE TABLE NGOMA(ID INT(13),F_NAME CHAR(10),L_NAME CHAR(10),GENDER CHAR(2),PROVINCE CHAR(15),DISTRICT CHAR(15),SECTOR CHAR(15),CELL CHAR(15),E-MAIL VARCHAR(30),PHONE INT(15);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-MAIL VARCHAR(30),PHONE INT(15)' at line 1
+mysql> CREATE TABLE NGOMA(ID INT
+    -> CREATE TABLE NGOMA(ID INT(13),F_NAME CHAR(10),L_NAME CHAR(10),GENDER CHAR(2),PROVINCE CHAR(15),DISTRICT CHAR(15),SECTOR CHAR(15),CELL CHAR(15),E-MAIL VARCHAR(30),PHONE INT(15);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TABLE NGOMA(ID INT(13),F_NAME CHAR(10),L_NAME CHAR(10),GENDER CHAR(2),PRO' at line 2
+mysql> CREATE TABLE NGOMA(ID INT(13),F_NAME CHAR(10),L_NAME CHAR(10),GENDER CHAR(2),PROVINCE CHAR(15),DISTRICT CHAR(15),SECTOR CHAR(15),CELL CHAR(15),E-MAIL VARCHAR(30),PHONE INT(15));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-MAIL VARCHAR(30),PHONE INT(15))' at line 1
+mysql> CREATE TABLE NGOMA(ID INT(13),F_NAME CHAR(10),L_NAME CHAR(10),GENDER CHAR(2),PROVINCE CHAR(15),DISTRICT CHAR(15),SECTOR CHAR(15),CELL CHAR(15),E_MAIL VARCHAR(30),PHONE INT(15));
+Query OK, 0 rows affected, 2 warnings (0.02 sec)
+
+mysql> INSERT INTO NGOMA VALUES('1','GUHIRWA IMURINDE','DIVINE','F','SOUTH','NYARUGURU','NGERA', 'MURAMA', 'HIRWADIVINE@GMAIL.COM','0790836701');
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> SELECT*FROM NGOMA;
++------+------------+--------+--------+----------+-----------+--------+--------+-----------------------+-----------+
+| ID   | F_NAME     | L_NAME | GENDER | PROVINCE | DISTRICT  | SECTOR | CELL   | E_MAIL                | PHONE     |
++------+------------+--------+--------+----------+-----------+--------+--------+-----------------------+-----------+
+|    1 | GUHIRWA IM | DIVINE | F      | SOUTH    | NYARUGURU | NGERA  | MURAMA | HIRWADIVINE@GMAIL.COM | 790836701 |
++------+------------+--------+--------+----------+-----------+--------+--------+-----------------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('2','MUNEZERO','Enock','F','NOTH','MUSANZE','MUHOZA','KABEZA','MUNEZERO@GMAIL.COM','0784532762');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA','NYAMUGARI','MUKAMALEA@GMAIL.COM',0793421670');
+    '>
+    '> INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA','NYAMUGARI','MUKAMALEA@GMAIL.COM',0793421670');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '');
+
+INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAK' at line 1
+mysql> INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA','NYAMUGARI','MUKAMALEA@GMAIL.COM',0793421670');
+    '> INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA','NYAMUGARI','MUKAMALEA@GMAIL.COM',0793421670');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '');
+INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA' at line 1
+mysql> INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA','NYAMUGARI','MUKAMALEA@GMAIL.COM',0793421670');
+    '>
+    '> INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA','NYAMUGARI','MUKAMALEA@GMAIL.COM',0793421670');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '');
+
+INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAK' at line 1
+mysql> INSERT INTO NGOMA VALUES('3','MUKAMA', 'LEA','M','SOUTH','NYAMAGABE','GASAKA','NYAMUGARI','MUKAMALEA@GMAIL.COM','0793421670');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('4','NISHIMWE','DELICE','f','EAST', 'RWAMAGANA','MUSHA','RUBENGERA','NISHIMWEDELICE@gmail.com','0723416142');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT*FROM NGOMA;
++------+------------+--------+--------+----------+-----------+--------+-----------+--------------------------+-----------+
+| ID   | F_NAME     | L_NAME | GENDER | PROVINCE | DISTRICT  | SECTOR | CELL      | E_MAIL                   | PHONE     |
++------+------------+--------+--------+----------+-----------+--------+-----------+--------------------------+-----------+
+|    1 | GUHIRWA IM | DIVINE | F      | SOUTH    | NYARUGURU | NGERA  | MURAMA    | HIRWADIVINE@GMAIL.COM    | 790836701 |
+|    2 | MUNEZERO   | Enock  | F      | NOTH     | MUSANZE   | MUHOZA | KABEZA    | MUNEZERO@GMAIL.COM       | 784532762 |
+|    3 | MUKAMA     | LEA    | M      | SOUTH    | NYAMAGABE | GASAKA | NYAMUGARI | MUKAMALEA@GMAIL.COM      | 793421670 |
+|    4 | NISHIMWE   | DELICE | f      | EAST     | RWAMAGANA | MUSHA  | RUBENGERA | NISHIMWEDELICE@gmail.com | 723416142 |
++------+------------+--------+--------+----------+-----------+--------+-----------+--------------------------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD DEPARTEMENT CHAR(13);
+Query OK, 4 rows affected (0.04 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT*FROM NGOMA;
++------+------------+--------+--------+----------+-----------+--------+-----------+--------------------------+-----------+-------------+
+| ID   | F_NAME     | L_NAME | GENDER | PROVINCE | DISTRICT  | SECTOR | CELL      | E_MAIL                   | PHONE     | DEPARTEMENT |
++------+------------+--------+--------+----------+-----------+--------+-----------+--------------------------+-----------+-------------+
+|    1 | GUHIRWA IM | DIVINE | F      | SOUTH    | NYARUGURU | NGERA  | MURAMA    | HIRWADIVINE@GMAIL.COM    | 790836701 | NULL        |
+|    2 | MUNEZERO   | Enock  | F      | NOTH     | MUSANZE   | MUHOZA | KABEZA    | MUNEZERO@GMAIL.COM       | 784532762 | NULL        |
+|    3 | MUKAMA     | LEA    | M      | SOUTH    | NYAMAGABE | GASAKA | NYAMUGARI | MUKAMALEA@GMAIL.COM      | 793421670 | NULL        |
+|    4 | NISHIMWE   | DELICE | f      | EAST     | RWAMAGANA | MUSHA  | RUBENGERA | NISHIMWEDELICE@gmail.com | 723416142 | NULL        |
++------+------------+--------+--------+----------+-----------+--------+-----------+--------------------------+-----------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA DROP DEPARTMENT;
+ERROR 1091 (42000): Can't DROP 'DEPARTMENT'; check that column/key exists
+mysql> ALTER TABLE NGOMA ALL DROP DEPARTMENT;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ALL DROP DEPARTMENT' at line 1
+mysql> ALTER TABLE NGOMA  DROP ALL DEPARTMENT;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ALL DEPARTMENT' at line 1
+mysql> ALTER NGOMA DROP DEPARTMENT;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NGOMA DROP DEPARTMENT' at line 1
+mysql> INSERT INTO NGOMA VALUES('5','MUGISHA','AIME','M','KIGALI','KICUKIRO','KICUKIRO','GASASA','DIVE@GMAIL.COM','0785634120');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO NGOMA VALUES('5','MUGISHA','AIME','M','KIGALI','KICUKIRO','KICUKIRO','GASASA','DIVE@GMAIL.COM','0785634120','');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('6','GWIZA','EDDY','M','SOUTH', NYANZA','BUSASAMANA','MUGONZI','EDDY23@GMAIL.COM','0786543214','');
+    '> INSERT INTO NGOMA VALUES('6','GWIZA','EDDY','M','SOUTH', NYANZA','BUSASAMANA','MUGONZI','EDDY23@GMAIL.COM','0786543214','');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '','BUSASAMANA','MUGONZI','EDDY23@GMAIL.COM','0786543214','');
+INSERT INTO NGOMA ' at line 1
+mysql> INSERT INTO NGOMA VALUES('6','GWIZA','EDDY','M','SOUTH', 'NYANZA','BUSASAMANA','MUGONZI','EDDY23@GMAIL.COM','0786543214','');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('7','MWIZA','KELLY','WEST','NYABIHU','RWESERO','CYABAKAMYI','MWIZA@GMAIL.COM','0756442323','');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO NGOMA VALUES('7','MWIZA','KELLY','M','WEST','NYABIHU','RWESERO','CYABAKAMYI','MWIZA@GMAIL.COM','0756442323','');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('8','HUMURA','KESSIA','F','SOUTH','KAMONYI','RUYENZI','BERWA','KESSIA@GMAIL.COM','05433262627','');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> SELECT*FROM NGOMA;
++------+------------+--------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+| ID   | F_NAME     | L_NAME | GENDER | PROVINCE | DISTRICT  | SECTOR     | CELL       | E_MAIL                   | PHONE      | DEPARTEMENT |
++------+------------+--------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+|    1 | GUHIRWA IM | DIVINE | F      | SOUTH    | NYARUGURU | NGERA      | MURAMA     | HIRWADIVINE@GMAIL.COM    |  790836701 | NULL        |
+|    2 | MUNEZERO   | Enock  | F      | NOTH     | MUSANZE   | MUHOZA     | KABEZA     | MUNEZERO@GMAIL.COM       |  784532762 | NULL        |
+|    3 | MUKAMA     | LEA    | M      | SOUTH    | NYAMAGABE | GASAKA     | NYAMUGARI  | MUKAMALEA@GMAIL.COM      |  793421670 | NULL        |
+|    4 | NISHIMWE   | DELICE | f      | EAST     | RWAMAGANA | MUSHA      | RUBENGERA  | NISHIMWEDELICE@gmail.com |  723416142 | NULL        |
+|    5 | MUGISHA    | AIME   | M      | KIGALI   | KICUKIRO  | KICUKIRO   | GASASA     | DIVE@GMAIL.COM           |  785634120 |             |
+|    6 | GWIZA      | EDDY   | M      | SOUTH    | NYANZA    | BUSASAMANA | MUGONZI    | EDDY23@GMAIL.COM         |  786543214 |             |
+|    7 | MWIZA      | KELLY  | M      | WEST     | NYABIHU   | RWESERO    | CYABAKAMYI | MWIZA@GMAIL.COM          |  756442323 |             |
+|    8 | HUMURA     | KESSIA | F      | SOUTH    | KAMONYI   | RUYENZI    | BERWA      | KESSIA@GMAIL.COM         | 2147483647 |             |
++------+------------+--------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('8','HIRWA','KENNEDY','M','SOUTH','MUHANGA','RUHERU','RWAZA','KENNEDY@GMAIL.COM','0785432123','');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO NGOMA VALUES('10','NEZERWA','BERRY','M','KIGALI','GASABO','NGENDA','NGENDA','NEZERWA@GMAIL.COM','0735462646','');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT*FROM NGOMA;
++------+------------+---------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+| ID   | F_NAME     | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR     | CELL       | E_MAIL                   | PHONE      | DEPARTEMENT |
++------+------------+---------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+|    1 | GUHIRWA IM | DIVINE  | F      | SOUTH    | NYARUGURU | NGERA      | MURAMA     | HIRWADIVINE@GMAIL.COM    |  790836701 | NULL        |
+|    2 | MUNEZERO   | Enock   | F      | NOTH     | MUSANZE   | MUHOZA     | KABEZA     | MUNEZERO@GMAIL.COM       |  784532762 | NULL        |
+|    3 | MUKAMA     | LEA     | M      | SOUTH    | NYAMAGABE | GASAKA     | NYAMUGARI  | MUKAMALEA@GMAIL.COM      |  793421670 | NULL        |
+|    4 | NISHIMWE   | DELICE  | f      | EAST     | RWAMAGANA | MUSHA      | RUBENGERA  | NISHIMWEDELICE@gmail.com |  723416142 | NULL        |
+|    5 | MUGISHA    | AIME    | M      | KIGALI   | KICUKIRO  | KICUKIRO   | GASASA     | DIVE@GMAIL.COM           |  785634120 |             |
+|    6 | GWIZA      | EDDY    | M      | SOUTH    | NYANZA    | BUSASAMANA | MUGONZI    | EDDY23@GMAIL.COM         |  786543214 |             |
+|    7 | MWIZA      | KELLY   | M      | WEST     | NYABIHU   | RWESERO    | CYABAKAMYI | MWIZA@GMAIL.COM          |  756442323 |             |
+|    8 | HUMURA     | KESSIA  | F      | SOUTH    | KAMONYI   | RUYENZI    | BERWA      | KESSIA@GMAIL.COM         | 2147483647 |             |
+|    8 | HIRWA      | KENNEDY | M      | SOUTH    | MUHANGA   | RUHERU     | RWAZA      | KENNEDY@GMAIL.COM        |  785432123 |             |
+|   10 | NEZERWA    | BERRY   | M      | KIGALI   | GASABO    | NGENDA     | NGENDA     | NEZERWA@GMAIL.COM        |  735462646 |             |
++------+------------+---------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+10 rows in set (0.00 sec)
+
+    -> mysql> update ngoma set DEPARTEMENTt='BIT'where id='2';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+------+------------+---------+--------+----------+-----------+------------+----' at line 1
+mysql> ERROR 1054 (42S22): Unknown column 'DEPARTEMENTt' in 'field list'
+    -> mysql> update ngoma set DEPARTEMENTt='CASS'where id='3';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1054 (42S22): Unknown column 'DEPARTEMENTt' in 'field list'
+mysql> update ' at line 1
+mysql> ERROR 1054 (42S22): Unknown column 'DEPARTEMENTt' in 'field list'
+    -> mysql> update ngoma set DEPARTEMENTt='BIT'where id='4';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1054 (42S22): Unknown column 'DEPARTEMENTt' in 'field list'
+mysql> update ' at line 1
+mysql> ERROR 1054 (42S22): Unknown column 'DEPARTEMENTt' in 'field list'
+    -> mysql> update ngoma set DEPARTEMENT='CASS'where id='3';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1054 (42S22): Unknown column 'DEPARTEMENTt' in 'field list'
+mysql> update ' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    -> Rows matched: 1  Changed: 1  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='BIT'where id='2';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+my' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    -> Rows matched: 1  Changed: 1  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='BIT'where id='4';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+my' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    -> Rows matched: 1  Changed: 1  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='SOCIOLOGY'where id='5';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+my' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    -> Rows matched: 1  Changed: 1  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='ACCOUNTING'where id='6';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+my' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    -> Rows matched: 1  Changed: 1  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='MEDECINE'where id='7';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+my' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    -> Rows matched: 1  Changed: 1  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='CASS'where id='8';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+my' at line 1
+mysql> Query OK, 2 rows affected (0.00 sec)
+    -> Rows matched: 2  Changed: 2  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='MEDECINE'where id='9';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+m' at line 1
+mysql> Query OK, 0 rows affected (0.00 sec)
+    -> Rows matched: 0  Changed: 0  Warnings: 0
+    ->
+    -> mysql> update ngoma set DEPARTEMENT='BIT'where id='10';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+m' at line 1
+mysql> Query OK, 1 row affected (0.00 sec)
+    -> Rows matched: 1  Changed: 1  Warnings: 0
+    ->
+    -> mysql> SELECT*FROM NGOMA;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+my' at line 1
+mysql> +------+------------+---------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+    -> | ID   | F_NAME     | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR     | CELL       | E_MAIL                   | PHONE      | DEPARTEMENT |
+    -> +------+------------+---------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+    -> |    1 | GUHIRWA IM | DIVINE  | F      | SOUTH    | NYARUGURU | NGERA      | MURAMA     | HIRWADIVINE@GMAIL.COM    |  790836701 | accounting  |
+    -> |    2 | MUNEZERO   | Enock   | F      | NOTH     | MUSANZE   | MUHOZA     | KABEZA     | MUNEZERO@GMAIL.COM       |  784532762 | BIT         |
+    -> |    3 | MUKAMA     | LEA     | M      | SOUTH    | NYAMAGABE | GASAKA     | NYAMUGARI  | MUKAMALEA@GMAIL.COM      |  793421670 | CASS        |
+    -> |    4 | NISHIMWE   | DELICE  | f      | EAST     | RWAMAGANA | MUSHA      | RUBENGERA  | NISHIMWEDELICE@gmail.com |  723416142 | BIT         |
+    -> |    5 | MUGISHA    | AIME    | M      | KIGALI   | KICUKIRO  | KICUKIRO   | GASASA     | DIVE@GMAIL.COM           |  785634120 | SOCIOLOGY   |
+    -> |    6 | GWIZA      | EDDY    | M      | SOUTH    | NYANZA    | BUSASAMANA | MUGONZI    | EDDY23@GMAIL.COM         |  786543214 | ACCOUNTING  |
+    -> |    7 | MWIZA      | KELLY   | M      | WEST     | NYABIHU   | RWESERO    | CYABAKAMYI | MWIZA@GMAIL.COM          |  756442323 | MEDECINE    |
+    -> |    8 | HUMURA     | KESSIA  | F      | SOUTH    | KAMONYI   | RUYENZI    | BERWA      | KESSIA@GMAIL.COM         | 2147483647 | CASS        |
+    -> |    8 | HIRWA      | KENNEDY | M      | SOUTH    | MUHANGA   | RUHERU     | RWAZA      | KENNEDY@GMAIL.COM        |  785432123 | CASS        |
+    -> |   10 | NEZERWA    | BERRY   | M      | KIGALI   | GASABO    | NGENDA     | NGENDA     | NEZERWA@GMAIL.COM        |  735462646 | BIT         |
+    -> +------+------------+---------+--------+----------+-----------+------------+------------+--------------------------+------------+-------------+
+    -> 10 rows in set (0.00 sec)
+    ->
+    -> mysql> SELECT*FROM NGOMA WHERE GENDER='M'AND PROVINCE='SOUTH';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+------+------------+---------+--------+----------+-----------+------------+----' at line 1
+mysql> +------+--------+---------+--------+----------+-----------+------------+-----------+---------------------+-----------+-------------+
+    -> | ID   | F_NAME | L_NAME  | GENDER | PROVINCE | DISTRICT  | SECTOR     | CELL      | E_MAIL              | PHONE     | DEPARTEMENT |
+    -> +------+--------+---------+--------+----------+-----------+------------+-----------+---------------------+-----------+-------------+
+    -> |    3 | MUKAMA | LEA     | M      | SOUTH    | NYAMAGABE | GASAKA     | NYAMUGARI | MUKAMALEA@GMAIL.COM | 793421670 | CASS        |
+    -> |    6 | GWIZA  | EDDY    | M      | SOUTH    | NYANZA    | BUSASAMANA | MUGONZI   | EDDY23@GMAIL.COM    | 786543214 | ACCOUNTING  |
+    -> |    8 | HIRWA  | KENNEDY | M      | SOUTH    | MUHANGA   | RUHERU     | RWAZA     | KENNEDY@GMAIL.COM   | 785432123 | CASS        |
+    -> +------+--------+---------+--------+----------+-----------+------------+-----------+---------------------+-----------+-------------+
+    -> 3 rows in set (0.00 sec)
+    ->
+    -> mysql> SELECT*FROM NGOMA WHERE DISTRICT='MUSANZE'AND DEPARTMENT='BIT';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+------+--------+---------+--------+----------+-----------+------------+--------' at line 1
+mysql> ERROR 1054 (42S22): Unknown column 'DEPARTMENT' in 'where clause'
+    -> mysql> SELECT*FROM NGOMA WHERE DISTRICT='MUSANZE'AND DEPARTEMENT='BIT';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ERROR 1054 (42S22): Unknown column 'DEPARTMENT' in 'where clause'
+mysql> SELECT*' at line 1
+mysql> +------+----------+--------+--------+----------+----------+--------+--------+--------------------+-----------+-------------+
+    -> | ID   | F_NAME   | L_NAME | GENDER | PROVINCE | DISTRICT | SECTOR | CELL   | E_MAIL             | PHONE     | DEPARTEMENT |
+    -> +------+----------+--------+--------+----------+----------+--------+--------+--------------------+-----------+-------------+
+    -> |    2 | MUNEZERO | Enock  | F      | NOTH     | MUSANZE  | MUHOZA | KABEZA | MUNEZERO@GMAIL.COM | 784532762 | BIT         |
+    -> +------+----------+--------+--------+----------+----------+--------+--------+--------------------+-----------+-------------+
+    -> 1 row in set (0.00 sec)
+    ->
+    -> mysql> ALTER TABLE NGOMA DROP DISTRICT;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+------+----------+--------+--------+----------+----------+--------+--------+---' at line 1
+mysql> Query OK, 10 rows affected (0.07 sec)
+    -> Records: 10  Duplicates: 0  Warnings: 0
+    ->
+    -> mysql> SELECT*FROM NGOMA;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 10 rows affected (0.07 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+m' at line 1
+mysql> +------+------------+---------+--------+----------+------------+------------+--------------------------+------------+-------------+
+    -> | ID   | F_NAME     | L_NAME  | GENDER | PROVINCE | SECTOR     | CELL       | E_MAIL                   | PHONE      | DEPARTEMENT |
+    -> +------+------------+---------+--------+----------+------------+------------+--------------------------+------------+-------------+
+    -> |    1 | GUHIRWA IM | DIVINE  | F      | SOUTH    | NGERA      | MURAMA     | HIRWADIVINE@GMAIL.COM    |  790836701 | accounting  |
+    -> |    2 | MUNEZERO   | Enock   | F      | NOTH     | MUHOZA     | KABEZA     | MUNEZERO@GMAIL.COM       |  784532762 | BIT         |
+    -> |    3 | MUKAMA     | LEA     | M      | SOUTH    | GASAKA     | NYAMUGARI  | MUKAMALEA@GMAIL.COM      |  793421670 | CASS        |
+    -> |    4 | NISHIMWE   | DELICE  | f      | EAST     | MUSHA      | RUBENGERA  | NISHIMWEDELICE@gmail.com |  723416142 | BIT         |
+    -> |    5 | MUGISHA    | AIME    | M      | KIGALI   | KICUKIRO   | GASASA     | DIVE@GMAIL.COM           |  785634120 | SOCIOLOGY   |
+    -> |    6 | GWIZA      | EDDY    | M      | SOUTH    | BUSASAMANA | MUGONZI    | EDDY23@GMAIL.COM         |  786543214 | ACCOUNTING  |
+    -> |    7 | MWIZA      | KELLY   | M      | WEST     | RWESERO    | CYABAKAMYI | MWIZA@GMAIL.COM          |  756442323 | MEDECINE    |
+    -> |    8 | HUMURA     | KESSIA  | F      | SOUTH    | RUYENZI    | BERWA      | KESSIA@GMAIL.COM         | 2147483647 | CASS        |
+    -> |    8 | HIRWA      | KENNEDY | M      | SOUTH    | RUHERU     | RWAZA      | KENNEDY@GMAIL.COM        |  785432123 | CASS        |
+    -> |   10 | NEZERWA    | BERRY   | M      | KIGALI   | NGENDA     | NGENDA     | NEZERWA@GMAIL.COM        |  735462646 | BIT         |
+    -> +------+------------+---------+--------+----------+------------+------------+--------------------------+------------+-------------+
+    -> 10 rows in set (0.00 sec)         
